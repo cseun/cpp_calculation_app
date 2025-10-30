@@ -125,7 +125,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="calculate.cpp" />
+    <ClCompile Include="calculate_except.cpp" />
+    <ClCompile Include="calculator.cpp" />
     <ClCompile Include="CalculatorConsoleApp.cpp" />
+    <ClCompile Include="insert.cpp" />
+    <ClCompile Include="normalize.cpp" />
+    <ClCompile Include="validate.cpp" />
+    <ClCompile Include="validate_except.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="calculate_except.h" />
+    <ClInclude Include="calculate.h" />
+    <ClInclude Include="calculator.h" />
+    <ClInclude Include="insert.h" />
+    <ClInclude Include="normalize.h" />
+    <ClInclude Include="validate.h" />
+    <ClInclude Include="validate_except.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

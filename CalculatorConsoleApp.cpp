@@ -33,7 +33,7 @@ int main()
 	std::cout << "- 첫 글자가 종료문자(x, X)인 경우 프로그램이 종료됩니다. \n";
 
 	// dump 테스트용 예외 발생
-	CreateException();
+	//CreateException();
 
 	while (1) {
 		try {

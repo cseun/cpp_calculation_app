@@ -10,10 +10,16 @@
 #include "normalize.h"
 #include "calculate.h"
 #include "calculator.h"
+#include "handle_dump.h"
 #pragma endregion
 
 int main()
 {
+	const WCHAR* appName = L"CalculatorConsoleApp";
+	const WCHAR* appVersion = L"v1.0";
+	std::unique_ptr<HandleDump> dumpHandler =  std::make_unique<HandleDump>(appName, appVersion);
+	SetUnhandledExceptionFilter(dumpHandler->UnHandledExceptionFilter);
+
 	std::cout << "== (●ˇ∀ˇ●) 계산기 프로그램 ==\n";
 	std::cout << "[ 설명 ]\n";
 	std::cout << "계산할 연산식을 입력하시오. (종료문자 x 혹은 X)\n";
@@ -53,4 +59,3 @@ int main()
 		
 	}
 }
-	

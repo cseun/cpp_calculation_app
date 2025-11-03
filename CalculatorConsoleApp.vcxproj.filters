@@ -42,6 +42,9 @@
     <ClCompile Include="calculate_except.cpp">
       <Filter>include</Filter>
     </ClCompile>
+    <ClCompile Include="handle_dump.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="insert.h">
@@ -63,6 +66,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="calculator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="handle_dump.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

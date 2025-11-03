@@ -13,11 +13,15 @@
 #include "handle_dump.h"
 #pragma endregion
 
+// Dump 생성 테스트용 함수
+void CreateException(int* a = nullptr) {
+	a[100] = 100;
+}
+
 int main()
 {
-	const WCHAR* appName = L"CalculatorConsoleApp";
-	const WCHAR* appVersion = L"v1.0";
-	std::unique_ptr<HandleDump> dumpHandler =  std::make_unique<HandleDump>(appName, appVersion);
+	// dump 핸들러 등록
+	std::unique_ptr<HandleDump> dumpHandler =  std::make_unique<HandleDump>(L"\\Dump", L"CalculatorConsoleApp", L"v1.0");
 	SetUnhandledExceptionFilter(dumpHandler->UnHandledExceptionFilter);
 
 	std::cout << "== (●ˇ∀ˇ●) 계산기 프로그램 ==\n";
@@ -27,6 +31,9 @@ int main()
 	std::cout << "- 소수점 2자리까지 표시됩니다.\n";
 	std::cout << "- 허용된 연산문자 외의 문자는 제외하고 계산됩니다. \n";
 	std::cout << "- 첫 글자가 종료문자(x, X)인 경우 프로그램이 종료됩니다. \n";
+
+	// dump 테스트용 예외 발생
+	CreateException();
 
 	while (1) {
 		try {
